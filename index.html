@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>NexPage — דף נחיתה שמסנן לידים. בלי לבזבז עוד שעה על "כמה זה עולה".</title>
+<meta name="description" content="הלקוחות שלך שואלים רק על מחיר? חסר לך דף נחיתה שמחמם אותם לפני השיחה. בונה לך דף שמסנן לידים קרים — ומביא רק את מי שכבר רוצה לעבוד איתך.">
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800;900&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  color-scheme: light only !important;
+  --navy: #1E3A5F;
+  --navy-deep: #0F2547;
+  --orange: #FF6B35;
+  --orange-light: #FF8C42;
+  --orange-pastel: #FFE5D9;
+  --bg: #FAFAFA;
+  --text: #0F1B2D;
+  --text-soft: #4A5568;
+  --shadow-soft: 0 4px 20px rgba(30, 58, 95, 0.08);
+  --shadow-soft-lg: 0 12px 35px rgba(30, 58, 95, 0.14);
+  --shadow-orange: 0 4px 18px rgba(255, 107, 53, 0.18);
+  --radius: 18px;
+  --radius-sm: 12px;
+}
+
+html { scroll-behavior: smooth; color-scheme: light only !important; background-color: #FAFAFA !important; }
+
+body {
+  font-family: 'Heebo', sans-serif !important;
+  background-color: #FAFAFA !important;
+  color: #0F1B2D !important;
+  -webkit-text-fill-color: #0F1B2D;
+  line-height: 1.6; font-size: 17px; overflow-x: hidden;
+  background-image: radial-gradient(circle at 15% 0%, rgba(30, 58, 95, 0.06) 0%, transparent 50%),
+                    radial-gradient(circle at 85% 100%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Rubik', sans-serif !important; font-weight: 900; line-height: 1.2;
+  color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+.top-banner {
+  background: linear-gradient(135deg, #1E3A5F 0%, #0F2547 100%) !important;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  text-align: center; padding: 12px 16px;
+  font-weight: 700; font-size: 14px; position: sticky; top: 0; z-index: 50;
+  box-shadow: 0 2px 12px rgba(15, 37, 71, 0.25);
+}
+.top-banner span { color: #FF8C42 !important; -webkit-text-fill-color: #FF8C42 !important; }
+
+.nav { padding: 24px 0 8px; text-align: center; }
+.logo {
+  font-family: 'Rubik', sans-serif !important; font-weight: 900; font-size: 28px;
+  color: #1E3A5F !important; -webkit-text-fill-color: #1E3A5F !important;
+  letter-spacing: -0.5px;
+}
+.logo span { color: #FF6B35 !important; -webkit-text-fill-color: #FF6B35 !important; }
+
+.hero { padding: 28px 0 50px; text-align: center; }
+.eyebrow {
+  display: inline-block;
+  background-color: #FFFFFF !important;
+  color: #1E3A5F !important; -webkit-text-fill-color: #1E3A5F !important;
+  padding: 10px 18px; border-radius: 999px; font-size: 13px; font-weight: 700;
+  margin-bottom: 24px; box-shadow: var(--shadow-soft);
+  border: 1px solid #E5EBF2;
+}
+.eyebrow .dot {
+  display: inline-block; width: 8px; height: 8px; background: #FF6B35 !important;
+  border-radius: 50%; margin-left: 8px; vertical-align: middle;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+
+.hero h1 {
+  font-size: clamp(34px, 7.5vw, 52px);
+  margin-bottom: 22px; letter-spacing: -1.2px;
+}
+.hero h1 .hl {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+  padding: 4px 14px; display: inline-block;
+  border-radius: 12px;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: var(--shadow-orange);
+}
+.hero p.sub {
+  font-size: 19px; color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important;
+  max-width: 580px; margin: 0 auto 30px; font-weight: 500;
+}
+.hero p.sub strong { color: #1E3A5F !important; -webkit-text-fill-color: #1E3A5F !important; font-weight: 800; }
+
+.trust-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 32px; }
+.pill {
+  background-color: #FFFFFF !important; border-radius: 999px; padding: 8px 16px;
+  font-size: 13px; font-weight: 700;
+  color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+  box-shadow: var(--shadow-soft); border: 1px solid #E5EBF2;
+}
+.pill::before { content: "✓ "; color: #FF6B35; font-weight: 900; }
+
+.cta-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%) !important;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  padding: 18px 38px; border-radius: var(--radius);
+  font-family: 'Rubik', sans-serif !important; font-weight: 800; font-size: 19px;
+  border: none; box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+  transition: all 0.25s ease; cursor: pointer; text-align: center;
+}
+.cta-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(255, 107, 53, 0.4); }
+.cta-primary.navy {
+  background: linear-gradient(135deg, #1E3A5F 0%, #0F2547 100%) !important;
+  box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3);
+}
+.cta-primary.navy:hover { box-shadow: 0 14px 38px rgba(30, 58, 95, 0.4); }
+.cta-wrap { text-align: center; margin: 24px 0; }
+.cta-mini { font-size: 13px; color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important; margin-top: 12px; }
+
+section { padding: 60px 0; background-color: transparent; }
+
+.section-eyebrow {
+  display: inline-block; font-size: 13px; font-weight: 700;
+  color: #FF6B35 !important; -webkit-text-fill-color: #FF6B35 !important;
+  text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;
+}
+h2.section-title {
+  font-size: clamp(28px, 6vw, 38px); margin-bottom: 16px; letter-spacing: -0.5px;
+}
+.section-sub {
+  font-size: 17px; color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important;
+  margin-bottom: 32px;
+}
+
+/* === WAKE UP === */
+.wake-up { background-color: #FFFFFF !important; }
+.wake-up-body { margin-top: 24px; }
+.wake-up-body p {
+  font-size: 18px; color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+  margin-bottom: 18px; line-height: 1.75;
+}
+.wake-up-body p strong { color: #1E3A5F !important; -webkit-text-fill-color: #1E3A5F !important; font-weight: 800; }
+.wake-up-quote {
+  background: linear-gradient(135deg, #FFE5D9 0%, #FFF0E8 100%) !important;
+  border-right: 5px solid #FF6B35;
+  padding: 22px 24px; margin: 28px 0 8px; border-radius: var(--radius-sm);
+  font-size: 19px; font-weight: 700;
+  color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+  line-height: 1.5;
+}
+
+/* === PAIN === */
+.pain-list { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+.pain-item {
+  background-color: #FFFFFF !important; border-radius: var(--radius-sm); padding: 20px 22px;
+  box-shadow: var(--shadow-soft); display: flex; align-items: flex-start; gap: 14px;
+  transition: transform 0.2s ease;
+  border: 1px solid #EEF2F7;
+}
+.pain-item:hover { transform: translateX(-4px); }
+.pain-item p { color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important; font-weight: 500; }
+.pain-item .x {
+  flex-shrink: 0; width: 30px; height: 30px;
+  background-color: #FFE5D9 !important;
+  color: #FF6B35 !important; -webkit-text-fill-color: #FF6B35 !important;
+  border-radius: 50%; display: grid; place-items: center;
+  font-weight: 900; font-size: 14px;
+}
+
+/* === REASONS === */
+.reasons-grid { display: grid; gap: 18px; margin-top: 32px; }
+.reason-card {
+  background-color: #FFFFFF !important; border-radius: var(--radius); padding: 30px 24px;
+  box-shadow: var(--shadow-soft); position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #EEF2F7;
+}
+.reason-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft-lg); }
+.reason-card .num {
+  position: absolute; top: -18px; right: 22px;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%) !important;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: 'Rubik', sans-serif !important; font-weight: 900; font-size: 22px;
+  box-shadow: var(--shadow-orange);
+}
+.reason-card h3 {
+  font-size: 22px; margin: 12px 0 10px;
+}
+.reason-card p {
+  color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important;
+  font-size: 15.5px;
+}
+.reason-card p strong { color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important; }
+
+/* === GUARANTEE === */
+.guarantee {
+  background: linear-gradient(135deg, #1E3A5F 0%, #0F2547 100%) !important;
+  color: #FFFFFF !important; position: relative; overflow: hidden;
+}
+.guarantee h2.section-title { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
+.guarantee .section-eyebrow { color: #FF8C42 !important; -webkit-text-fill-color: #FF8C42 !important; }
+.guarantee-card {
+  background-color: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius); padding: 32px 28px; margin-top: 28px; text-align: center;
+  position: relative; z-index: 1;
+  backdrop-filter: blur(10px);
+}
+.guarantee-card .badge {
+  display: inline-block; width: 100px; height: 100px;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%) !important;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  border-radius: 50%; display: grid; place-items: center;
+  font-family: 'Rubik', sans-serif !important; font-weight: 900;
+  margin-bottom: 20px; box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+}
+.guarantee-card .badge .big { font-size: 36px; line-height: 1; }
+.guarantee-card .badge .sm { font-size: 13px; margin-top: 2px; }
+.guarantee-card h3 {
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  font-size: 26px; margin-bottom: 14px;
+}
+.guarantee-card p {
+  color: rgba(255,255,255,0.92) !important; -webkit-text-fill-color: rgba(255,255,255,0.92) !important;
+  font-size: 16px;
+}
+
+/* === FAQ === */
+.faq { background-color: #F4F7FB !important; }
+.faq-list { display: grid; gap: 12px; margin-top: 32px; }
+.faq-item {
+  background-color: #FFFFFF !important; border-radius: var(--radius-sm); overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #EEF2F7;
+}
+.faq-q {
+  width: 100%; background: none; border: none; text-align: right;
+  padding: 20px 22px; font-family: 'Rubik', sans-serif !important; font-weight: 700;
+  font-size: 17px;
+  color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+.faq-q .icon {
+  width: 30px; height: 30px;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%) !important;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  border-radius: 50%; display: grid; place-items: center;
+  font-weight: 900; flex-shrink: 0; transition: transform 0.3s ease;
+}
+.faq-item.open .faq-q .icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
+  padding: 0 22px;
+  color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important;
+  font-size: 15.5px;
+}
+.faq-item.open .faq-a { max-height: 500px; padding: 0 22px 20px; }
+
+/* === FINAL CTA === */
+.final-cta {
+  background: linear-gradient(135deg, #0F2547 0%, #1A3160 100%) !important;
+  color: #FFFFFF !important; padding: 70px 0;
+}
+.final-cta h2 {
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  font-size: clamp(30px, 6vw, 42px); text-align: center; margin-bottom: 14px;
+}
+.final-cta h2 .hl {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%) !important;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  padding: 4px 14px; border-radius: 10px; display: inline-block;
+}
+.final-cta .section-sub {
+  color: rgba(255,255,255,0.78) !important; -webkit-text-fill-color: rgba(255,255,255,0.78) !important;
+  text-align: center; max-width: 480px; margin: 0 auto 36px;
+}
+
+.form-card {
+  background-color: #FFFFFF !important; border-radius: var(--radius);
+  padding: 30px 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+.form-card .form-title {
+  font-family: 'Rubik', sans-serif !important; font-weight: 900; font-size: 24px;
+  color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+  margin-bottom: 6px; text-align: center;
+}
+.form-card .form-sub {
+  font-size: 14px; color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important;
+  text-align: center; margin-bottom: 22px;
+}
+.form-card .field { margin-bottom: 14px; }
+.form-card label {
+  display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px;
+  color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+}
+.form-card input {
+  width: 100%; padding: 14px 16px; border: 1.5px solid #E5EBF2;
+  border-radius: 12px; font-family: 'Heebo', sans-serif !important; font-size: 16px;
+  background-color: #FAFAFA !important;
+  color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+}
+.form-card input::placeholder { color: #8A95AD !important; -webkit-text-fill-color: #8A95AD !important; }
+.form-card input:focus { outline: none; border-color: #FF6B35; background-color: #FFFFFF !important; box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.12); }
+.form-card button {
+  width: 100%;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%) !important;
+  color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;
+  padding: 18px; border: none; border-radius: 14px;
+  font-family: 'Rubik', sans-serif !important; font-weight: 900; font-size: 18px;
+  cursor: pointer; box-shadow: 0 10px 28px rgba(255, 107, 53, 0.35);
+  transition: all 0.2s ease; margin-top: 8px;
+}
+.form-card button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 14px 35px rgba(255, 107, 53, 0.45); }
+.form-card button:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-disclaimer { font-size: 12px; color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important; text-align: center; margin-top: 14px; }
+.form-success {
+  background: linear-gradient(135deg, #FFE5D9 0%, #FFF0E8 100%) !important;
+  border-radius: 14px; padding: 22px; text-align: center;
+  font-weight: 700; color: #0F1B2D !important; -webkit-text-fill-color: #0F1B2D !important;
+  display: none;
+  border: 2px solid #FF6B35;
+}
+.form-success.show { display: block; }
+.form-error { color: #DC2626 !important; -webkit-text-fill-color: #DC2626 !important; font-size: 13px; margin-top: 8px; text-align: center; display: none; }
+.form-error.show { display: block; }
+.urgency-bar {
+  background: linear-gradient(135deg, #FFE5D9 0%, #FFF0E8 100%) !important;
+  color: #1E3A5F !important; -webkit-text-fill-color: #1E3A5F !important;
+  border-radius: 12px; padding: 12px 16px;
+  text-align: center; font-weight: 700; margin-bottom: 22px; font-size: 14px;
+  border: 1px solid #FFD4BC;
+}
+
+footer {
+  background-color: #FFFFFF !important;
+  padding: 30px 0; text-align: center; font-size: 13px;
+  color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important;
+  border-top: 1px solid #EEF2F7;
+}
+footer .logo { font-size: 20px; margin-bottom: 8px; display: inline-block; }
+footer p { margin: 4px 0; color: #4A5568 !important; -webkit-text-fill-color: #4A5568 !important; }
+
+.wa-float {
+  position: fixed; bottom: 20px; left: 20px; width: 58px; height: 58px;
+  background-color: #25D366 !important; border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  display: grid; place-items: center; z-index: 100; transition: transform 0.25s ease;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 32px; height: 32px; fill: #FFFFFF; }
+
+.sticky-mobile-cta {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background-color: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(20px);
+  padding: 12px 16px; z-index: 90; display: none;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+}
+.sticky-mobile-cta .cta-primary { width: 100%; padding: 14px; font-size: 17px; }
+
+@media (max-width: 640px) { .sticky-mobile-cta { display: block; } body { padding-bottom: 80px; } .wa-float { bottom: 90px; } }
+@media (min-width: 720px) { .reasons-grid { grid-template-columns: repeat(3, 1fr); } }
+</style>
+</head>
+<body>
+
+<div class="top-banner">🎁 השקה: ₪500 הנחה ל-5 הלקוחות הראשונים <span>•</span> נשארו 3 מקומות</div>
+
+<nav class="nav"><div class="container"><div class="logo">Nex<span>Page</span></div></div></nav>
+
+<!-- ============= HERO ============= -->
+<section class="hero"><div class="container">
+  <div class="eyebrow"><span class="dot"></span> דף נחיתה לעסקים שרוצים לידים איכותיים</div>
+  <h1>
+    כל הלידים שלך<br>
+    שואלים רק:<br>
+    <span class="hl">"כמה זה עולה?"</span>
+  </h1>
+  <p class="sub">
+    זה לא הקהל ולא המודעה. זה מה שקורה <strong>בין</strong> המודעה לשיחה איתך — שאין שם כלום שמסביר מי אתה ומחמם את הלקוח לפני שהוא פונה.
+  </p>
+  <div class="trust-pills"><span class="pill">דירקט-ריספונס</span><span class="pill">מסירה ב-7 ימים</span><span class="pill">אחריות 14 יום</span></div>
+  <div class="cta-wrap"><a href="#form" class="cta-primary" onclick="trackInitiate()">← אני רוצה לידים שמבינים מה אני עושה</a><div class="cta-mini">שיחת ייעוץ קצרה בזום • בלי התחייבות</div></div>
+</div></section>
+
+<!-- ============= WAKE UP ============= -->
+<section class="wake-up"><div class="container">
+  <span class="section-eyebrow">מה באמת קורה ללקוח שלך</span>
+  <h2 class="section-title">מודעה טובה מביאה תנועה.<br>דף טוב מסנן את הלקוחות.</h2>
+  <div class="wake-up-body">
+    <p>הלקוח רואה את המודעה או הרילס שלך. מעניין אותו. הוא לוחץ. ואז — אם אתה שולח אותו ישר לוואטסאפ או לפרופיל אינסטגרם — הוא <strong>תקוע</strong>.</p>
+    <p>חלקם פוחדים בכלל לפתוח שיחה ראשונה עם מישהו זר. אלה שכן שולחים — כותבים את הדבר היחיד שיש להם בראש, כי הם לא קראו עליך שום דבר לפני.</p>
+    <div class="wake-up-quote">דף נחיתה הוא מה שעובד <em>בין</em> המודעה לוואטסאפ — מסביר מי אתה, מה אתה עושה, ולמה אצלך.</div>
+    <p>זה ההבדל בין תנועה סתמית, לבין לידים שמגיעים אליך כשהם <strong>כבר מבינים ורוצים</strong>.</p>
+  </div>
+</div></section>
+
+<!-- ============= PAIN ============= -->
+<section class="pain"><div class="container">
+  <span class="section-eyebrow">סימנים שגם אתה במצב הזה</span>
+  <h2 class="section-title">מרגיש מוכר? 👇</h2>
+  <p class="section-sub">אם 2 מהאלה מתאימים לך — זה הדף בשבילך:</p>
+  <div class="pain-list">
+    <div class="pain-item"><div class="x">✗</div><p>אתה מתחיל כל שיחה מאפס — מסביר מי אתה ומה אתה עושה, כי הלקוח לא קרא עליך כלום לפני.</p></div>
+    <div class="pain-item"><div class="x">✗</div><p>לקוח שואל "יש לך אתר?" — ואתה שולח אותו לאינסטגרם או לוואטסאפ.</p></div>
+    <div class="pain-item"><div class="x">✗</div><p>הקמפיין מראה הרבה קליקים. הוואטסאפ שותק. אנשים שלא העזו לשלוח הודעה — פשוט נעלמו.</p></div>
+    <div class="pain-item"><div class="x">✗</div><p>אתה משלם על פרסום כל חודש, אבל לא באמת יודע אם הלידים שמגיעים שווים את הכסף.</p></div>
+  </div>
+</div></section>
+
+<!-- ============= REASONS ============= -->
+<section class="reasons"><div class="container">
+  <span class="section-eyebrow">למה דף נחיתה — ולא עוד פרסומת</span>
+  <h2 class="section-title">3 דברים שדף נחיתה עושה,<br>שאינסטגרם או וואטסאפ לא יכולים.</h2>
+  <p class="section-sub">בלי הבטחות. רק מה שהדף עושה בפועל.</p>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="num">1</div>
+      <h3>מסנן לקוחות קרים</h3>
+      <p>מי שעבר על הדף וקרא — הבין מה אתה עושה. אם הוא השאיר פרטים, הוא <strong>כבר מעוניין</strong>. אתה לא מתחיל מאפס בכל שיחה.</p>
+    </div>
+    <div class="reason-card">
+      <div class="num">2</div>
+      <h3>מוריד את החיכוך</h3>
+      <p>הרבה אנשים לא ישלחו הודעה ראשונה לזר. <strong>למלא טופס — פחות מאיים</strong>. יותר אנשים יעברו את השלב הזה ויהפכו ללידים.</p>
+    </div>
+    <div class="reason-card">
+      <div class="num">3</div>
+      <h3>השיחה איתך נפתחת אחרת</h3>
+      <p>אתה מתקשר ללקוח שכבר יודע מי אתה ולמה אצלך. הוא לא שואל "כמה?" — הוא שואל <strong>"מתי מתחילים?"</strong></p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============= GUARANTEE ============= -->
+<section class="guarantee"><div class="container">
+  <span class="section-eyebrow">ולמה לקחת סיכון איתי?</span>
+  <h2 class="section-title">כי אם הדף לא ימצא חן בעיניך — אתה לא משלם.</h2>
+  <div class="guarantee-card">
+    <div class="badge"><div><div class="big">14</div><div class="sm">ימי תיקונים</div></div></div>
+    <h3>תיקונים ללא הגבלה.<br>עד שאתה מרוצה.</h3>
+    <p>14 ימים מהמסירה — כל תיקון, כל ניסוח מחדש, כל שינוי עיצוב. בלי תוספות. את התשלום השני אתה משלם רק כשאתה מרוצה ב-100%.</p>
+  </div>
+</div></section>
+
+<!-- ============= FAQ ============= -->
+<section class="faq"><div class="container">
+  <span class="section-eyebrow">שאלות נפוצות</span>
+  <h2 class="section-title">מה שעוד מתלבטים בו</h2>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q"><span>כמה זה עולה?</span><span class="icon">+</span></button><div class="faq-a"><p>הפרויקט הסטנדרטי הוא ₪2,500. ב-5 הלקוחות הראשונים אני נותן ₪500 הנחה — סה"כ ₪2,000.</p></div></div>
+    <div class="faq-item"><button class="faq-q"><span>תוך כמה זמן הדף יהיה מוכן?</span><span class="icon">+</span></button><div class="faq-a"><p>7 ימי עסקים מרגע התשלום הראשון: 5 ימים בנייה + 2 ימים תיקונים.</p></div></div>
+    <div class="faq-item"><button class="faq-q"><span>אני צריך לכתוב את הטקסטים בעצמי?</span><span class="icon">+</span></button><div class="faq-a"><p>לא. אני כותב את הקופי מאפס, אחרי שיחת תחקיר איתך. אתה רק מספר לי על העסק ועל הלקוחות שלך — את השאר אני עושה.</p></div></div>
+    <div class="faq-item"><button class="faq-q"><span>מה אם הדף לא יביא לידים בכלל?</span><span class="icon">+</span></button><div class="faq-a"><p>14 ימי תיקונים ללא הגבלה — אם הקופי לא מספיק חד אני משכתב, אם המבנה לא ממיר אני משנה. הכל כלול בעלות המקורית.<br><br>חשוב להבין: דף נחיתה תלוי גם בתנועה (קמפיין פרסום) ובטיפול בלידים אחרי שהם נכנסים. אני אחראי על הדף — אבל ביחד נסתכל על התמונה המלאה.</p></div></div>
+    <div class="faq-item"><button class="faq-q"><span>איך אני משלם?</span><span class="icon">+</span></button><div class="faq-a"><p>50% מקדמה בתחילת העבודה, 50% במסירה. חשבונית עוסק מורשה לכל תשלום.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ============= FINAL CTA ============= -->
+<section class="final-cta" id="form"><div class="container">
+  <h2>הליד הבא יכול להיות<br><span class="hl">חם, לא קר.</span></h2>
+  <p class="section-sub">שיחת זום קצרה, בלי התחייבות. נשב, אבין את העסק שלך, ונראה אם דף נחיתה באמת מתאים לך — או שאין צורך.</p>
+  <div class="form-card">
+    <div class="urgency-bar">⚡ נשארו 3 מקומות במחיר ההשקה</div>
+    <div class="form-title">שיחת ייעוץ בזום • חינם</div>
+    <div class="form-sub">אני חוזר אליך תוך 24 שעות</div>
+    <form id="leadForm" novalidate>
+      <div class="field"><label for="name">איך קוראים לך?</label><input type="text" id="name" name="name" placeholder="ישראל ישראלי" required></div>
+      <div class="field"><label for="phone">טלפון</label><input type="tel" id="phone" name="phone" placeholder="050-1234567" required></div>
+      <div class="field"><label for="email">אימייל (אופציונלי)</label><input type="email" id="email" name="email" placeholder="you@example.com"></div>
+      <button type="submit" id="submitBtn">← בוא נדבר</button>
+      <div class="form-error" id="formError">נא למלא שם וטלפון תקין</div>
+      <p class="form-disclaimer">השארת פרטים אינה מחייבת.</p>
+    </form>
+    <div class="form-success" id="formSuccess">✓ קיבלתי! חוזר אליך תוך 24 שעות 🤝</div>
+  </div>
+</div></section>
+
+<footer><div class="container">
+  <div class="logo">Nex<span style="color:#FF6B35 !important; -webkit-text-fill-color:#FF6B35 !important;">Page</span></div>
+  <p>דפי נחיתה לעסקים שרוצים לידים איכותיים.</p>
+  <p>© 2026 NexPage • כל הזכויות שמורות</p>
+</div></footer>
+
+<a href="https://wa.me/972508380805?text=היי, ראיתי את הדף ואני מתעניין בדף נחיתה" class="wa-float" target="_blank" aria-label="וואטסאפ">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<div class="sticky-mobile-cta"><a href="#form" class="cta-primary" onclick="trackInitiate()">← בוא נדבר</a></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    document.querySelectorAll('.faq-item.open').forEach(open => { if (open !== item) open.classList.remove('open'); });
+    item.classList.toggle('open');
+  });
+});
+function trackInitiate() { if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout'); }
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzVTgdvqT4MVqV67mGY2SGRKN_cOMrjmsZlMTYaPEc33R5B-shrvD_wCEKVqG69N4sN/exec';
+const form = document.getElementById('leadForm');
+const submitBtn = document.getElementById('submitBtn');
+const formError = document.getElementById('formError');
+const formSuccess = document.getElementById('formSuccess');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  formError.classList.remove('show');
+  if (!name || phone.replace(/\D/g, '').length < 9) { formError.classList.add('show'); return; }
+  submitBtn.disabled = true; submitBtn.textContent = 'שולח...';
+  try {
+    const formData = new URLSearchParams();
+    formData.append('name', name); formData.append('phone', phone); formData.append('email', email);
+    await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: formData });
+    if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+    form.style.display = 'none'; formSuccess.classList.add('show');
+  } catch (err) {
+    formError.textContent = 'שגיאה — נסה שוב'; formError.classList.add('show');
+    submitBtn.disabled = false; submitBtn.innerHTML = '← בוא נדבר';
+  }
+});
+</script>
+</body>
+</html>
